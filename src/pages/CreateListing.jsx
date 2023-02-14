@@ -168,11 +168,13 @@ function CreateListing() {
     delete formDataCopy.images
     delete formDataCopy.address
     !formDataCopy.offer && delete formDataCopy.discountedPrice
+    console.log(formDataCopy, 'FORM DATA COPY')
 
     const docRef = await addDoc(collection(db, 'listings'), formDataCopy)
     setLoading(false)
     toast.success('Listing created')
-    navigate(`/category/${formDataCopy.type}/${docRef.id}}`)
+    console.log(docRef.id, 'DOC REF ID')
+    navigate(`/category/${formDataCopy.type}/${docRef.id}`)
   }
 
   const onMutate = (e) => {
