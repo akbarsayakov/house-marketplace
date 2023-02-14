@@ -301,6 +301,12 @@ button {
     margin-bottom: 10rem;
   }
 }
+
+@media (max-width: 1217px) {
+  .explore {
+    margin-bottom: 10rem;
+  }
+}
 @media (max-height: 536) {
   .explore {
     margin-bottom: 10rem;
